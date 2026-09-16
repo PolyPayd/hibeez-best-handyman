@@ -163,14 +163,14 @@ section { position: relative; }
 }
 .grain-overlay {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   pointer-events: none;
   opacity: 0.5;
   mix-blend-mode: overlay;
 }
 .hero-glow {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   pointer-events: none;
   background:
     radial-gradient(560px 420px at 88% 8%, rgba(220,180,60,0.20), transparent 60%),
@@ -314,10 +314,11 @@ section { position: relative; }
 .mobile-panel {
   display: none;
   position: fixed;
-  inset: var(--header-h) 0 0 0;
+  top: var(--header-h); right: 0; bottom: 0; left: 0;
   background: var(--navy-950);
   z-index: 99;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 28px 24px 120px;
 }
 .mobile-panel.is-open { display: block; }
@@ -502,7 +503,7 @@ section { position: relative; }
 .seal::before {
   content: "";
   position: absolute;
-  inset: 8px;
+  top: 8px; right: 8px; bottom: 8px; left: 8px;
   border-radius: 50%;
   border: 1px dashed rgba(220,180,60,0.55);
 }
@@ -550,7 +551,7 @@ section { position: relative; }
 }
 .compare img {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   width: 100%; height: 100%;
   object-fit: contain;
   pointer-events: none;
@@ -558,7 +559,7 @@ section { position: relative; }
 .compare .compare-after { z-index: 1; }
 .compare .compare-before-wrap {
   position: absolute;
-  inset: 0;
+  top: 0; bottom: 0; left: 0;
   z-index: 2;
   overflow: hidden;
   width: 50%;
@@ -612,7 +613,7 @@ section { position: relative; }
 }
 .compare-range {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   width: 100%; height: 100%;
   margin: 0;
   opacity: 0;
@@ -677,7 +678,7 @@ section { position: relative; }
 }
 .gallery-item::after {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   background: linear-gradient(to top, rgba(0,9,20,0.7), transparent 55%);
   mix-blend-mode: multiply;
   opacity: 0.85;
