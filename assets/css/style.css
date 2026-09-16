@@ -933,6 +933,45 @@ body.has-mobile-cta { padding-bottom: 62px; }
 .on-cream .stat-block span,
 .on-stone .stat-block span { color: var(--ink-500); }
 
+/* Hero trust row: seal + two stats, forced onto one line at every width */
+.hero-stats-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.hero-stats-row .stat-block { min-width: 0; }
+.hero-stats-row .stat-block span { display: block; line-height: 1.35; }
+.hero-stats-row .seal {
+  width: 64px; height: 64px;
+  flex-shrink: 0;
+}
+.hero-stats-row .seal-inner svg { width: 14px; height: 14px; margin-bottom: 2px; }
+.hero-stats-row .seal-inner strong { font-size: 0.5rem; }
+.hero-stats-row .seal-inner span { font-size: 0.44rem; }
+.hero-stats-row .stat-block strong { font-size: 1.5rem; }
+.hero-stats-row .stat-block span { font-size: 0.58rem; }
+
+@media (min-width: 420px) {
+  .hero-stats-row { gap: 16px; }
+  .hero-stats-row .seal { width: 84px; height: 84px; }
+  .hero-stats-row .seal-inner svg { width: 18px; height: 18px; }
+  .hero-stats-row .seal-inner strong { font-size: 0.58rem; }
+  .hero-stats-row .seal-inner span { font-size: 0.5rem; }
+  .hero-stats-row .stat-block strong { font-size: 1.9rem; }
+  .hero-stats-row .stat-block span { font-size: 0.64rem; }
+}
+
+@media (min-width: 640px) {
+  .hero-stats-row { gap: 20px; }
+  .hero-stats-row .seal { width: 118px; height: 118px; }
+  .hero-stats-row .seal-inner svg { width: 22px; height: 22px; margin-bottom: 4px; }
+  .hero-stats-row .seal-inner strong { font-size: 0.66rem; }
+  .hero-stats-row .seal-inner span { font-size: 0.58rem; }
+  .hero-stats-row .stat-block strong { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+  .hero-stats-row .stat-block span { font-size: 0.72rem; }
+}
+
 .divider-line { height: 1px; background: var(--stone-300); border: none; }
 .on-dark .divider-line { background: rgba(255,255,255,0.12); }
 
