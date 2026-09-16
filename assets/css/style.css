@@ -654,6 +654,8 @@ section { position: relative; }
   text-align: center;
   margin-top: 10px;
 }
+.on-cream .compare-hint,
+.on-stone .compare-hint { color: var(--ink-500); }
 
 /* ============ Gallery grid ============ */
 .gallery-grid {
